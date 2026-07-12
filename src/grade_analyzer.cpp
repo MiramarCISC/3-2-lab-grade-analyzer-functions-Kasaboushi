@@ -1,10 +1,12 @@
 #include "grade_analyzer.hpp"
 #include <iostream>
 
+// this file contains analysis functions for main.cpp. Functions take in inputted scores and averages to operate.
+
 using namespace std;
 
 double calculateTotal(double score1, double score2, double score3) {
-    // TODO: Return the sum of the three scores.
+    // Returns the sum of the three scores.
     return score1 + score2 + score3 ;
 }
 
@@ -40,12 +42,12 @@ char determineLetterGrade(double average) {
 }
 
 bool isPassing(double average) {
-    // TODO: Return true when average is 70 or higher.
-    return average >= 70;
+    // Return true when average is 70 or higher.
+    return average >= 70; // this works, though it might be a little awkward...still, it's fine.
 }
 
 bool isValidScore(double score) {
-    return score >= 0.0 && score <= 100.0;
+    return score >= 0 && score <= 100; //maybe consider adding parentheses for readability. Also, the .0 s are unnecessary here.
 }
 
 void printGradeReport(double total, double average, char letterGrade, bool passing) {
